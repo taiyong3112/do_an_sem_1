@@ -19,6 +19,11 @@ Create New Destination | Wend Travel
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Destination Name">
+                        @error('name')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Image</label>
@@ -26,6 +31,11 @@ Create New Destination | Wend Travel
                             <input type="file" class="custom-file-input" id="customFile" name="upload">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
+                        @error('upload')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Status</label>

@@ -20,15 +20,25 @@ Update Tour | Wend Travel
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" name="name" value="{{$tour->name}}">
+                        @error('name')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Destination</label>
-                        <select name="destination_id" class="form-control" required="required">
+                        <select name="destination_id" class="form-control">
                             <option value="">Choose one</option>
                             @foreach($destination as $dest)
                             <option value="{{$dest->id}}">{{$dest->name}}</option>
                             @endforeach
                         </select>
+                        @error('destination_id')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Image</label>
@@ -36,26 +46,56 @@ Update Tour | Wend Travel
                             <input type="file" class="custom-file-input" id="customFile" name="upload">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
+                        @error('upload')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Summary</label>
-                        <textarea name="summary" class="form-control" rows="3" required="required" value="{{$tour->summary}}"></textarea>
+                        <textarea name="summary" class="form-control" rows="3" value="{{$tour->summary}}"></textarea>
+                        @error('summary')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Content</label>
-                        <textarea name="content" class="form-control" rows="7" required="required" value="{{$tour->content}}"></textarea>
+                        <textarea name="content" class="form-control" rows="7" value="{{$tour->content}}"></textarea>
+                        @error('content')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Adult Price</label>
                         <input type="adult_price" class="form-control" name="adult_price" value="{{$tour->adult_price}}">
+                        @error('adult_price')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Child Price</label>
                         <input type="children_price" class="form-control" name="children_price" value="{{$tour->children_price}}">
+                        @error('children_price')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Duration</label>
                         <input type="duration" class="form-control" name="duration" value="{{$tour->duration}}">
+                        @error('duration')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Package</label>

@@ -27,4 +27,10 @@ class PackageRequest extends FormRequest
             'name' => 'required'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Package name cannot be blanked'
+        ]
+    }
 }

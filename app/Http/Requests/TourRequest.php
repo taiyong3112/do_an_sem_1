@@ -30,7 +30,8 @@ class TourRequest extends FormRequest
             'upload' => 'required|mimes:jpeg,png,gif',
             'adult_price' => 'required',
             'children_price' => 'required',
-            'duration' => 'required'
+            'duration' => 'required',
+            'destination_id' => 'required'
         ];
     }
     public function messages()
@@ -43,7 +44,8 @@ class TourRequest extends FormRequest
             'upload.mimes' => 'Please select correct picture format (png, jpeg, gif)',
             'adult_price.required' => 'Please enter adults price',
             'children_price.required' => 'Please enter children price',
-            'duration.required' => 'Please enter tour duration'
-        ]
+            'duration.required' => 'Please enter tour duration',
+            'destination_id' => 'Please choose a Destination'
+        ];
     }
 }

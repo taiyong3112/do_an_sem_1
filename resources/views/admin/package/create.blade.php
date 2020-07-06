@@ -19,6 +19,11 @@ Create New Package | Wend Travel
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Package Name">
+                        @error('name')
+                            <small class="help-block text-danger">
+                                {{$message}}
+                            </small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Status</label>

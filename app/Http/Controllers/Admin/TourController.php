@@ -45,7 +45,7 @@ class TourController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TourRequest $request)
     {
         $file = $request->file('upload');
         $file_name = $file->getClientOriginalName();
@@ -102,7 +102,7 @@ class TourController extends Controller
      * @param  \App\Models\Tour  $tour
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tour $tour)
+    public function update(TourRequest $request, Tour $tour)
     {
         $file = $request->file('upload');
         $file_name = $file->getClientOriginalName();
