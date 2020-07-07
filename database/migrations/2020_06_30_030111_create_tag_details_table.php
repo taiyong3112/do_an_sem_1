@@ -14,10 +14,10 @@ class CreateTagDetailsTable extends Migration
     public function up()
     {
         Schema::create('tag_details', function (Blueprint $table) {
-            $table->unsignedInteger('tag_id');
             $table->unsignedInteger('tour_id');
-            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
             $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
+            $table->unsignedInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
         });
     }
 

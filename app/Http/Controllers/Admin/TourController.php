@@ -62,6 +62,8 @@ class TourController extends Controller
         $tour->adult_price = $request->adult_price;
         $tour->children_price = $request->children_price;
         $tour->duration = $request->duration;
+        $tour->meta_keywords = $request->meta_keywords;
+        $tour->meta_descriptions = $request->meta_descriptions;
 
         $tour->save();
 

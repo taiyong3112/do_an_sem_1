@@ -15,8 +15,8 @@ class CreateBookingDetailsTable extends Migration
     {
         Schema::create('booking_details', function (Blueprint $table) {
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('tour_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('tour_id');
             $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
         });
     }

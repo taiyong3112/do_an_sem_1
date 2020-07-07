@@ -14,10 +14,10 @@ class CreateServiceDetailsTable extends Migration
     public function up()
     {
         Schema::create('service_details', function (Blueprint $table) {
-            $table->unsignedInteger('service_id');
             $table->unsignedInteger('tour_id');
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
+            $table->unsignedInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
         });
     }
 
