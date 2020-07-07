@@ -12,4 +12,9 @@ class Destination extends Model
     	'status'
     ];
     public $timestamps = false;
+
+    public function tours()
+    {
+    	return $this->hasMany(Tour::class,'destination_id','id')->where('status', 1);
+    }
 }

@@ -59,11 +59,10 @@
 									<a href="" class="dropdown-toggle" data-toggle="dropdown">Trip Package <i class="fas fa-chevron-down"></i></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="{{route('tourlist')}}">ThaiLand</a>
-											<a href="{{route('tourlist')}}">London</a>
-											<a href="{{route('tourlist')}}">Australia</a>
-											<a href="{{route('tourlist')}}">Vietnam</a>
-											<a href="{{route('tourlist')}}">Japan</a>
+											@foreach($destination as $dest)
+											<a href="{{route('home.destination',['id'=>$dest->id,'slug'=> Str::slug($dest->name)])}}">{{$dest->name}}</a>
+											@endforeach
+											
 										</li>
 									</ul>
 								</li>

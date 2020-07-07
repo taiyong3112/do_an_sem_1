@@ -23,10 +23,9 @@ class CreateToursTable extends Migration
             $table->integer('adult_price');
             $table->integer('children_price');
             $table->integer('duration');
+            $table->tinyInteger('status')->default(0);
             $table->string('meta_keywords', 100)->nullable();
             $table->string('meta_descriptions', 160)->nullable();
-            $table->double('tour_latitude')->nullable();
-            $table->double('tour_longtitude')->nullable();
             $table->timestamp('created_at')->useCurrent();
 
             $table->foreign('destination_id')->references('id')->on('destinations');

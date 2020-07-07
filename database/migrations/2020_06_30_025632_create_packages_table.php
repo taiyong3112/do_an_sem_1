@@ -16,7 +16,7 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 150);
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default('0');
             $table->timestamp('created_at')->useCurrent();
         });
     }

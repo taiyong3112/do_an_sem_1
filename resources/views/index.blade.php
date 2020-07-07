@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+	
 @section('main')
 	<div class="banner-home">
 			<div class="container">

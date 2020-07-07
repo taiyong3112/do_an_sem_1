@@ -109,6 +109,19 @@ Update Tour | Wend Travel
                         @endforeach
                     </div>
                     <div class="form-group">
+                        <label>Status</label>
+                        <div class="custom-control custom-radio">
+                            <label>
+                                <input type="radio" name="status" value="1" checked>
+                                Publish
+                            </label>
+                            <label>
+                                <input type="radio" name="status" value="0">
+                                Un Publish
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label>Meta Keywords</label>
                         <input type="text" class="form-control" name="meta_keywords" placeholder="Meta Keywords">
                     </div>

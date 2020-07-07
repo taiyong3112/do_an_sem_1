@@ -13,15 +13,12 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController@homepage')->name('index');
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+
 Route::group(['prefix'=>'pages'], function(){
-	Route::get('tourlist', function(){
-		return view('pages.tourlist');
-	})->name('tourlist');
-	Route::get('tourlist-detail',function(){
+	Route::get('/{id}-{slug}', 'HomeController@destination')->name('home.destination');
+	Route::get('tourlist-detail', function(){
 		return view('pages.tourdetail');
 	})->name('tour-detail');
 	Route::get('about',function(){

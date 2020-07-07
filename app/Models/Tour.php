@@ -14,7 +14,9 @@ class Tour extends Model
     	'image',
     	'adult_price',
     	'children_price',
-    	'duration'
+    	'duration',
+        'meta_keywords',
+        'meta_descriptions'
     ];
     public $timestamps = false;
 
